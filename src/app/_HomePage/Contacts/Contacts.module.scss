@@ -1,0 +1,204 @@
+@use "../../../assets/styles/app";
+
+.contacts {
+  @include app.container;
+  @include app.block_padding;
+  background-color: app.$background_black;
+
+  .inner {
+    @include app.inner;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h2.title {
+      margin-top: 8px;
+      font-weight: 500;
+      font-size: 20px;
+      color: #fff;
+
+      @include app.desktop {
+        margin-top: 10px;
+        font-size: 64px;
+      }
+    }
+
+    .blocks {
+      align-self: stretch;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 18px;
+      margin-top: 20px;
+
+      @include app.desktop {
+        margin-top: 96px;
+        grid-column-gap: 16px;
+      }
+
+      .block {
+        border: 2px solid #929292;
+        border-radius: 10px;
+        background: #1f2126;
+        padding: 14px 10px;
+
+        @include app.desktop {
+          border-radius: 30px;
+          padding: 36px;
+        }
+
+        .label {
+          font-weight: 300;
+          font-size: 20px;
+          color: #fff;
+
+          @include app.desktop {
+            font-size: 36px;
+          }
+        }
+
+        .socialLinks {
+          margin-top: 10px;
+          display: flex;
+          flex-direction: column;
+
+          @include app.desktop {
+            margin-top: 12px;
+            flex-direction: row;
+          }
+
+          .socialLink {
+            text-decoration: none;
+            border-radius: 8px;
+            background: #fff;
+            height: 38px;
+            padding-left: 8px;
+            display: flex;
+            align-items: center;
+
+            @include app.desktop {
+              height: 48px;
+              border-radius: 16px;
+              width: 136px;
+              padding-left: 0;
+              justify-content: center;
+            }
+
+            &:not(:first-child) {
+              margin-top: 8px;
+
+              @include app.desktop {
+                margin-top: 0;
+                margin-left: 20px;
+              }
+            }
+
+            img {
+              display: block;
+              width: auto;
+            }
+
+            p {
+              font-weight: 600;
+              font-size: 14px;
+              color: #000;
+              margin-left: 8px;
+
+              @include app.desktop {
+                font-size: 16px;
+              }
+            }
+
+
+            &:nth-child(1) {
+              img {
+                height: 28px;
+
+                @include app.desktop {
+                  height: 32px;
+                }
+              }
+            }
+
+            &:nth-child(2) {
+              img {
+                height: 27px;
+
+                @include app.desktop {
+                  height: 25px;
+                }
+              }
+            }
+
+            &:nth-child(3) {
+              img {
+                height: 23px;
+
+                @include app.desktop {
+                  height: 20px;
+                }
+              }
+
+              p {
+                font-weight: 400;
+                font-size: 10px;
+
+                @include app.desktop {
+                  font-size: 12px;
+                  width: 60px;
+                }
+              }
+            }
+
+
+          }
+        }
+
+        .links {
+          margin-top: 10px;
+
+          @include app.desktop {
+            margin-top: 12px;
+          }
+
+          .link {
+            @include app.centerRow;
+            height: 61px;
+            border-radius: 21px;
+
+            @include app.desktop {
+              height: 42px;
+            }
+
+            p {
+              text-align: center;
+              font-weight: 300;
+              font-size: 20px;
+
+              @include app.desktop {
+                font-size: 24px;
+              }
+            }
+
+            &:not(:first-child) {
+              margin-top: 8px;
+            }
+
+            &:nth-child(1) {
+              background: #c837ab;
+            }
+
+            &:nth-child(2) {
+              background: #fff;
+            }
+
+          }
+
+        }
+
+      }
+
+
+    }
+
+  }
+}

@@ -1,0 +1,268 @@
+@use "../../../assets/styles/app";
+
+.firstBlock {
+  @include app.container;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    right: 50%;
+    bottom: 0;
+    background: #000;
+  }
+
+  .inner {
+    @include app.inner;
+    position: relative;
+    z-index: 2;
+    height: 314px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include app.desktop {
+      height: 900px;
+      padding-top: 242px;
+    }
+
+    .beauty {
+      width: 294px;
+      transform: translateX(50vw);
+
+      @include app.desktop {
+        align-self: flex-end;
+        width: auto;
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 14px;
+        text-align: right;
+        color: #000;
+
+        @include app.desktop {
+          font-size: 40px;
+        }
+      }
+    }
+
+    .bottomPart {
+      margin-top: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transform: translateY(400%);
+
+      @include app.desktop {
+        align-self: stretch;
+        margin-top: 480px;
+      }
+
+
+      .wb_button {
+        display: block;
+
+        img {
+          display: block;
+          width: 66px;
+          height: 24px;
+
+          @include app.desktop {
+            width: 179px;
+            height: 65px;
+          }
+        }
+      }
+
+      .scroll_further {
+        margin-left: 150px;
+
+        @include app.desktop {
+          margin-left: 0;
+        }
+
+
+        img {
+          display: block;
+          width: 90px;
+
+          @include app.desktop {
+            width: 320px;
+          }
+        }
+      }
+
+    }
+
+    .statue {
+      position: absolute;
+      z-index: 5;
+      left: 50%;
+      transform: translateX(-50%) scale(0.5);
+      transform-origin: bottom;
+      bottom: 0;
+      width: 165px;
+      height: auto;
+
+      @include app.desktop {
+        width: 520px;
+      }
+    }
+
+    .home_left_top {
+      position: absolute;
+      z-index: 2;
+      width: 44px;
+      height: auto;
+      left: 50%;
+      top: 75%;
+      opacity: 0;
+      transform: scale(0.25);
+
+      @include app.desktop {
+        width: 179px;
+      }
+    }
+
+    .home_left_bottom {
+      position: absolute;
+      z-index: 2;
+      width: 68px;
+      height: auto;
+      left: 50%;
+      top: 50%;
+      opacity: 0;
+      transform: scale(0.25);
+
+      @include app.desktop {
+        width: 277px;
+      }
+    }
+
+    .home_right_top {
+      position: absolute;
+      z-index: 2;
+      width: 43px;
+      height: auto;
+      left: 50%;
+      top: 50%;
+      opacity: 0;
+      transform: scale(0.25);
+
+      @include app.desktop {
+        width: 175px;
+      }
+    }
+
+    .home_right_bottom {
+      position: absolute;
+      z-index: 2;
+      width: 58px;
+      height: auto;
+      left: 50%;
+      top: 50%;
+      opacity: 0;
+      transform: scale(0.25);
+
+      @include app.desktop {
+        width: 232px;
+      }
+    }
+
+    .cloud {
+      width: 484px;
+      height: auto;
+      position: absolute;
+      top: 24px;
+      left: 50%;
+      transform: translate(-50%, -100%);
+
+      @include app.desktop {
+        width: 1662px;
+      }
+    }
+
+    .titleWrapperBottom, .titleWrapperTop {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+    }
+
+    .titleWrapperBottom {
+      z-index: 3;
+
+      div:nth-child(1) {
+        transform: translateX(-50vw);
+      }
+
+      div:nth-child(2) {
+        transform: translateX(100vw);
+      }
+
+      div:nth-child(1) > svg {
+        width: 113px;
+        height: 60px;
+
+        @include app.desktop {
+          width: 488px;
+          height: 263px;
+        }
+      }
+
+      div:nth-child(2) > svg {
+        width: 186px;
+        height: 65px;
+
+        @include app.desktop {
+          width: 810px;
+          height: 276px;
+        }
+      }
+    }
+
+    .titleWrapperTop {
+      z-index: 6;
+
+      div:nth-child(1) {
+        transform: translateX(-50vw);
+      }
+
+      div:nth-child(2) {
+        transform: translateX(100vw);
+      }
+
+      div:nth-child(1) > svg {
+        width: 114px;
+        height: 60px;
+
+        @include app.desktop {
+          width: 489px;
+          height: 268px;
+        }
+      }
+
+      div:nth-child(2) > svg {
+        width: 184px;
+        height: 62px;
+
+        @include app.desktop {
+          width: 803px;
+          height: 270px;
+        }
+      }
+    }
+
+
+  }
+
+
+}

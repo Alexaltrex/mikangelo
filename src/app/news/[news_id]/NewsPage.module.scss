@@ -1,0 +1,17 @@
+@use "../../../assets/styles/app";
+
+.newsPage {
+  @include app.container;
+  height: 100vh;
+
+  .inner {
+    @include app.inner;
+    height: 100% ;
+
+    //.img {
+    //  width: 200px;
+    //  height: 200px;
+    //}
+  }
+
+}

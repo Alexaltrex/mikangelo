@@ -1,0 +1,93 @@
+@use "../../../assets/styles/app";
+
+.catalog {
+  @include app.container;
+  @include app.block_padding;
+
+  .inner {
+    @include app.inner;
+
+    .images {
+      margin-top: 12px;
+
+      @include app.desktop {
+        margin-top: 70px;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 4px;
+        margin-top: 4px;
+
+        @include app.desktop {
+          grid-column-gap: 16px;
+          margin-top: 14px;
+        }
+      }
+
+      & > .imgWrapper {
+        &:not(:first-child) {
+          margin-top: 4px;
+
+          @include app.desktop {
+            margin-top: 14px;
+          }
+        }
+      }
+
+      .imgWrapper {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+
+        @include app.desktop {
+          border-radius: 24px;
+        }
+
+        &::after {
+          position: absolute;
+          z-index: 2;
+          content: "";
+          display: block;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background: linear-gradient(360deg, rgba(0, 0, 0, 0.7) 21.15%, rgba(10, 10, 10, 0.47) 42.79%, rgba(217, 217, 217, 0) 100%)
+        }
+
+        img {
+          display: block;
+          position: relative;
+          z-index: 1;
+          height: 64px;
+          width: 100%;
+          object-fit: cover;
+
+          @include app.desktop {
+            height: 272px;
+          }
+        }
+
+        .label {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 3;
+          font-weight: 900;
+          font-size: 8px;
+          color: #fff;
+          white-space: nowrap;
+
+          @include app.desktop {
+            font-size: 36px;
+          }
+        }
+      }
+
+
+    }
+  }
+}

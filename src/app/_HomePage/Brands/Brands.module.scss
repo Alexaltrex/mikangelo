@@ -1,0 +1,209 @@
+@use "../../../assets/styles/app";
+
+.brands {
+  @include app.container;
+  @include app.block_padding;
+  background: #FFF;
+
+  .inner {
+    @include app.inner;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .about {
+      margin-top: 8px;
+      font-weight: 300;
+      font-size: 10px;
+      color: #000;
+
+      @include app.desktop {
+        margin-top: 24px;
+        font-size: 36px;
+      }
+    }
+
+    .cardsWrapper {
+      position: relative;
+      margin-top: 28px;
+
+      @include app.desktop {
+        margin-top: 40px;
+      }
+
+      .cards {
+
+        .card {
+          border: 1px solid #959595;
+          box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.25);
+          border-radius: 86px;
+          width: 200px;
+          display: flex;
+          align-items: center;
+          padding: 8px 16px;
+
+          @include app.desktop {
+            width: 847px;
+            padding: 24px 48px;
+          }
+
+          & > img {
+            display: block;
+            width: 48px;
+            height: auto;
+
+            @include app.desktop {
+              width: 220px;
+            }
+          }
+
+          & > div {
+            margin-left: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include app.desktop {
+              margin-left: 36px;
+            }
+
+            & > p {
+              font-weight: 300;
+              font-size: 7px;
+              color: #000;
+
+              @include app.desktop {
+                font-size: 30px;
+              }
+
+              &:nth-child(1) {
+                font-weight: 500;
+
+                @include app.desktop {
+                  font-size: 36px;
+                }
+              }
+            }
+          }
+
+          &:not(:first-child) {
+            margin-top: 6px;
+
+            @include app.desktop {
+              margin-top: 28px;
+            }
+          }
+        }
+      }
+
+      .arrowWrapper {
+        position: absolute;
+        top: 0;
+        left: 244px;
+        height: 100%;
+        width: 1px;
+
+        @include app.desktop {
+          left: 1072px;
+          width: 2px;
+        }
+
+        .arrow {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1px;
+          height: 100%;
+          background: #000;
+
+          @include app.desktop {
+            width: 2px;
+            border-radius: 1px;
+          }
+
+          &::before {
+            position: absolute;
+            content: "";
+            display: block;
+            background: #000;
+            height: 1px;
+            width: 8px;
+            bottom: 0;
+            right: 0;
+            transform: rotate(45deg);
+            transform-origin: right center;
+
+            @include app.desktop {
+              height: 2px;
+              width: 16px;
+            }
+          }
+
+          &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            background: #000;
+            height: 1px;
+            width: 8px;
+            bottom: 0;
+            left: 0;
+            transform: rotate(-45deg);
+            transform-origin: left center;
+
+            @include app.desktop {
+              height: 2px;
+              width: 16px;
+            }
+          }
+        }
+
+        p {
+          position: absolute;
+          white-space: nowrap;
+          font-weight: 200;
+          font-size: 10px;
+          color: #000;
+
+          @include app.desktop {
+            font-size: 40px;
+          }
+
+          &:nth-child(1) {
+            left: 50%;
+            transform: translate(-50%, -100%);
+          }
+
+          &:nth-child(2) {
+            transform: rotate(-90deg);
+            top: 194px;
+            left: -12px;
+
+            @include app.desktop {
+              top: 800px;
+              left: -36px;
+            }
+          }
+
+          &:nth-child(3) {
+            transform: rotate(-90deg);
+            top: 600px;
+            left: -30px;
+
+            @include app.desktop {
+              top: 2800px;
+              left: -122px;
+            }
+          }
+
+        }
+      }
+
+
+    }
+
+
+  }
+
+}

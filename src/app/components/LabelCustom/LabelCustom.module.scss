@@ -1,0 +1,53 @@
+@import "../../../assets/styles/app";
+
+.labelCustom {
+  display: flex;
+  position: relative;
+  padding-left: 24px;
+
+  @include desktop {
+    padding-left: 0;
+  }
+
+  p {
+    position: relative;
+    z-index: 2;
+    font-weight: 500;
+    font-size: 15px;
+    color: #000;
+
+    @include desktop {
+      @include desktop {
+        font-size: 36px;
+      }
+    }
+  }
+
+  &::before {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    content: "";
+    left: -12px;
+    right: -12px;
+    top: 0;
+    bottom: 0;
+    background: #FFF;
+
+    @include desktop {
+      right: -24px;
+      left: calc(-0.5 * (100vw - 1266px));
+    }
+  }
+
+
+  &_dark {
+    p {
+      color: #FFF;
+    }
+
+    &::before {
+      background: #000;
+    }
+  }
+}

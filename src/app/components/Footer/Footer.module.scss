@@ -1,0 +1,72 @@
+@use "../../../assets/styles/app";
+
+.footer {
+  @include app.container;
+
+  .inner {
+    @include app.inner;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+
+    @include app.desktop {
+      height: 100px;
+    }
+
+    .logo {
+      width: 74px;
+      height: 28px;
+
+      @include app.desktop {
+        width: 161px;
+        height: 61px;
+      }
+
+      svg {
+        width: 74px;
+        height: 28px;
+
+        @include app.desktop {
+          width: 161px;
+          height: 61px;
+        }
+      }
+    }
+
+    .right {
+      font-weight: 300;
+      font-size: 10px;
+      color: #000;
+
+      @include app.desktop {
+        font-size: 29px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .link {
+      @include app.onlyDesktop();
+      text-decoration: none;
+      border: 1px solid #aaa;
+      border-radius: 10px;
+      padding: 10px 28px;
+      box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.5);
+
+      p {
+        font-weight: 300;
+        font-size: 16px;
+        text-align: center;
+        color: #000;
+      }
+    }
+
+
+
+
+  }
+}

@@ -1,0 +1,111 @@
+@use "../../../assets/styles/app";
+
+.aboutUs {
+  @include app.container;
+  overflow: hidden;
+  background: #111317;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+
+  @include app.desktop {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .inner {
+    @include app.inner;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .sun {
+      position: absolute;
+      z-index: 1;
+      width: 224px;
+      height: auto;
+      top: 20px;
+      left: 206px;
+
+      @include app.desktop {
+        width: 650px;
+        top: 36px;
+        left: auto;
+        right: -324px;
+      }
+    }
+
+    .head {
+      position: absolute;
+      z-index: 3;
+      width: 181px;
+      height: auto;
+      top: 12px;
+      left: 136px;
+
+      @include app.desktop {
+        width: 693px;
+        top: -62px;
+        left: auto;
+        right: -90px;
+      }
+    }
+
+
+    h2.title {
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 96%;
+      color: #fff;
+      width: 153px;
+      margin-top: 16px;
+
+      @include app.desktop {
+        font-size: 60px;
+        width: 857px;
+      }
+    }
+
+    .description {
+      margin-top: 8px;
+      font-weight: 200;
+      font-size: 10px;
+      line-height: 96%;
+      color: #fff;
+      width: 178px;
+
+      @include app.desktop {
+        font-size: 32px;
+        margin-top: 28px;
+        width: 815px;
+      }
+    }
+
+    .text {
+      position: relative;
+      z-index: 2;
+      background: #FFF;
+      margin-top: 16px;
+      border-radius: 16px;
+      padding: 8px 12px;
+
+      @include app.desktop {
+        margin-top: 24px;
+        padding: 32px;
+      }
+
+      p {
+        font-weight: 900;
+        font-size: 8px;
+        color: #000;
+
+        @include app.desktop {
+          font-size: 24px;
+          width: 1158px;
+        }
+      }
+    }
+
+  }
+}

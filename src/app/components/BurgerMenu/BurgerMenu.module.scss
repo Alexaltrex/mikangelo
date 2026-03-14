@@ -1,0 +1,39 @@
+@use "../../../assets/styles/app";
+
+.burgerMenu {
+  @include app.centerColumn;
+  @include app.onlyMobile(flex);
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #d9d9d9;
+  transition: 0.3s;
+
+
+  &_close {
+    transform: translateX(100%);
+  }
+
+  nav.links {
+    display: flex;
+    flex-direction: column;
+
+    .link {
+      text-decoration: none;
+      font-weight: 300;
+      font-size: 28px;
+      text-align: center;
+      color: #000;
+
+      &:not(:first-child) {
+        margin-top: 8px;
+      }
+    }
+  }
+
+
+
+}

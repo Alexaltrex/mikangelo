@@ -1,0 +1,160 @@
+@use "../../../assets/styles/app";
+
+.news {
+  background-color: app.$background_black;
+  @include app.container;
+  @include app.block_padding;
+
+  .inner {
+    @include app.inner;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .swiper {
+      width: 100%;
+      margin-top: 44px;
+
+      @include app.desktop {
+        margin-top: 124px;
+      }
+
+      .slide {
+        height: auto;
+
+        .card {
+          height: 100%;
+          border: 1px solid #dadada;
+          border-radius: 28px;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+
+          .imgWrapper {
+            flex-shrink: 0;
+            height: 150px;
+
+            @include app.desktop {
+              height: 232px;
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+
+          .info {
+            border-top: 1px solid #dadada;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 12px 12px 24px;
+
+            @include app.desktop {
+              padding: 18px 18px 24px;
+            }
+
+            .infoTop {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+
+              .label {
+                border: 1px solid #5a5a5a;
+                border-radius: 17px;
+                font-weight: 500;
+                font-size: 10px;
+                color: #fff;
+                padding: 8px 12px;
+
+                @include app.desktop {
+                  font-size: 14px;
+                }
+              }
+
+              .cardTitle {
+                margin-top: 12px;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 80%;
+                color: #fff;
+
+                @include app.desktop {
+                  margin-top: 18px;
+                  font-size: 32px;
+                }
+              }
+
+              .text {
+                margin-top: 8px;
+                font-weight: 400;
+                font-size: 13px;
+                color: #fff;
+
+                @include app.desktop {
+                  margin-top: 12px;
+                  font-size: 20px;
+                }
+              }
+            }
+
+            .read {
+              text-decoration: none;
+              margin-top: 20px;
+              display: flex;
+              align-items: center;
+
+              p {
+                font-weight: 400;
+                font-size: 10px;
+                color: #fff;
+
+                @include app.desktop {
+                  font-size: 14px;
+                }
+              }
+
+              svg {
+                margin-left: 4px;
+              }
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .navigation {
+      align-self: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 36px;
+
+      @include app.desktop {
+        margin-top: 48px;
+      }
+
+      button {
+        @include app.button;
+        @include app.centerRow;
+        height: 10px;
+
+        &:not(:first-child) {
+          margin-left: 80px;
+        }
+
+      }
+    }
+
+
+  }
+
+}

@@ -1,0 +1,91 @@
+@use "../../../assets/styles/app";
+
+.header {
+  @include app.container;
+  backdrop-filter: blur(71.9000015258789px);
+  background: radial-gradient(112.07% 59.07% at 50% 131.46%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 0.16%);
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  .inner {
+    @include app.inner;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+
+    @include app.desktop {
+      height: 90px;
+    }
+
+    .logo {
+      text-decoration: none;
+      width: 74px;
+      height: 28px;
+
+      @include app.desktop {
+        width: 161px;
+        height: 61px;
+      }
+
+      svg {
+        width: 74px;
+        height: 28px;
+
+        @include app.desktop {
+          width: 161px;
+          height: 61px;
+        }
+      }
+    }
+
+    .links {
+      @include app.onlyDesktop(flex);
+      align-items: center;
+
+      .link {
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 29px;
+        color: #000;
+        transition: 0.3s;
+
+        &:not(:first-child) {
+          margin-left: 45px;
+        }
+
+        &:hover {
+          color: app.$color_text_black_hover;
+        }
+      }
+
+
+    }
+
+    .burger {
+      @include app.button;
+      @include app.onlyMobile(flex);
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+
+      svg {
+        width: 24px;
+        height: 20px;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 20px;
+        color: #000;
+      }
+    }
+
+  }
+
+
+}

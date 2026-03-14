@@ -1,0 +1,143 @@
+@use "../../../assets/styles/app";
+
+.reviews {
+  @include app.container;
+  @include app.block_padding;
+
+  .inner {
+    @include app.inner;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .about {
+      margin-top: 16px;
+      font-weight: 300;
+      font-size: 16px;
+      color: #000;
+
+      @include app.desktop {
+        margin-top: 24px;
+        font-size: 36px;
+      }
+    }
+
+    .swiper {
+      width: 100%;
+      margin-top: 18px;
+
+      @include app.desktop {
+        margin-top: 36px;
+      }
+
+      .slide {
+        //height: auto;
+        padding: 16px;
+
+        .card {
+          height: 100%;
+          border: 2px solid #a7a7a7;
+          border-radius: 24px;
+          box-shadow: 0 0 21px 1px rgba(0, 0, 0, 0.25);
+          padding: 18px 12px;
+
+          @include app.desktop {
+            padding: 32px 24px;
+          }
+
+          .nameWrapper {
+            display: flex;
+            align-items: center;
+
+            p {
+              font-weight: 500;
+              font-size: 12px;
+              color: #000;
+
+              @include app.desktop {
+                font-size: 20px;
+              }
+            }
+
+            .stars {
+              display: flex;
+              align-items: center;
+              margin-left: 6px;
+
+              @include app.desktop {
+                margin-left: 8px;
+              }
+
+              svg {
+                width: 9px;
+                height: 9px;
+
+                @include app.desktop {
+                  width: 15px;
+                  height: 15px;
+                }
+
+                &:not(:first-child) {
+                  margin-left: 6px;
+
+                  @include app.desktop {
+                    margin-left: 11px;
+                  }
+                }
+              }
+            }
+
+
+          }
+
+          .text {
+            margin-top: 5px;
+            font-weight: 300;
+            font-size: 10px;
+            color: #000;
+
+            @include app.desktop {
+              margin-top: 9px;
+              font-size: 16px;
+            }
+          }
+
+
+        }
+
+      }
+
+    }
+
+    .navigation {
+      align-self: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 36px;
+
+      @include app.desktop {
+        margin-top: 48px;
+      }
+
+      button {
+        @include app.button;
+        @include app.centerRow;
+        height: 10px;
+
+        &:not(:first-child) {
+          margin-left: 80px;
+        }
+
+        svg {
+          path {
+            fill: #000;
+          }
+        }
+
+      }
+    }
+
+
+  }
+}
