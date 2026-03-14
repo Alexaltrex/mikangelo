@@ -24,7 +24,10 @@ export const FirstBlock = () => {
 
                 const {isMobile} = context.conditions as {isMobile: boolean};
 
-                gsap.timeline({repeat: 0})
+                gsap.timeline({
+                    //repeat: 0
+                    delay: 2,
+                })
                     .to(".statue", {
                         transform: "scale(1) translateX(-50%)",
                         duration,
