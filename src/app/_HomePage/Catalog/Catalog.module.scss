@@ -6,8 +6,12 @@
 
   .inner {
     @include app.inner;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
     .images {
+      align-self: stretch;
       margin-top: 12px;
 
       @include app.desktop {

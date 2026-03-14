@@ -15,7 +15,7 @@ export const Footer = () => {
                     все права защищены 2026
                 </p>
 
-                <Link href='/' className={style.link}>
+                <Link href='/#first' className={style.link}>
                    <p>Главная</p>
                 </Link>
 

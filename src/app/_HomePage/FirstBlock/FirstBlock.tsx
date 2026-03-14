@@ -26,7 +26,7 @@ export const FirstBlock = () => {
 
                 gsap.timeline({
                     //repeat: 0
-                    delay: 2,
+                    delay: 1,
                 })
                     .to(".statue", {
                         transform: "scale(1) translateX(-50%)",
@@ -100,6 +100,7 @@ export const FirstBlock = () => {
     return (
         <div className={style.firstBlock}
              ref={appRef}
+             id="first"
         >
             <div className={style.inner}>
 

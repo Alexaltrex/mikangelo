@@ -1,6 +1,7 @@
 import style from "./Contacts.module.scss"
 import {LabelCustom} from "../../components/LabelCustom/LabelCustom";
 import {allowedDisplayValues} from "next/dist/compiled/@next/font/dist/constants";
+import Link from "next/link";
 
 export const Contacts = () => {
     return (
@@ -24,17 +25,17 @@ export const Contacts = () => {
                                 [
                                     {
                                         src: "./social_instagram.png",
-                                        href: "#",
+                                        href: "https://www.instagram.com/mikangelobeauty?igsh=MWc1OGR1ajFuMjUycg%3D%3D&utm_source=qr",
                                         text: "Instagram",
                                     },
                                     {
                                         src: "./social_tiktok.png",
-                                        href: "#",
+                                        href: "https://www.tiktok.com/@mikangelobeauty?_r=1&_t=ZS-94gJJ2HmQbJ",
                                         text: "TikTok",
                                     },
                                     {
                                         src: "./social_wb.png",
-                                        href: "#",
+                                        href: "https://www.wildberries.ru/seller/1354346",
                                         text: "купите на wildberries",
                                     },
                                 ].map(({src, href, text}, key) => (
@@ -57,22 +58,20 @@ export const Contacts = () => {
                         <p className={style.label}>Быстрый переход</p>
 
                         <div className={style.links}>
-                            {
-                                [
-                                    {
-                                        text: "Перейти в Wildberries",
-                                    },
-                                    {
-                                        text: "Перейти в каталог",
-                                    },
-                                ].map(({text}, key) => (
-                                    <div key={key}
-                                         className={style.link}
-                                    >
-                                        <p>{text}</p>
-                                    </div>
-                                ))
-                            }
+
+                            <a href="https://www.wildberries.ru/seller/1354346"
+                               className={style.link}
+                               target="_blank"
+                               rel="noreferrer noopener nofollow"
+                            >
+                                <p>Перейти в Wildberries</p>
+                            </a>
+
+                            <Link href="/catalog"
+                                  className={style.link}
+                            >
+                                <p>Перейти в каталог</p>
+                            </Link>
                         </div>
 
                     </div>

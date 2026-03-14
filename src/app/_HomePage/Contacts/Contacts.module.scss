@@ -162,6 +162,7 @@
 
           .link {
             @include app.centerRow;
+            text-decoration: none;
             height: 61px;
             border-radius: 21px;
 
@@ -185,10 +186,18 @@
 
             &:nth-child(1) {
               background: #c837ab;
+
+              p {
+                color: #fff;
+              }
             }
 
             &:nth-child(2) {
               background: #fff;
+
+              p {
+                color: #000;
+              }
             }
 
           }
