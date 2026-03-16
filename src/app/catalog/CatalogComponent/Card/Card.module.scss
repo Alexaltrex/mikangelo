@@ -1,0 +1,113 @@
+@use "../../../../assets/styles/app";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 16px;
+  padding: 12px 10px;
+  width: 146px;
+  margin: 2px;
+
+  @include app.desktop {
+    width: 309px;
+    border-radius: 30px;
+    padding: 25px 22px 20px;
+    margin: 10px;
+  }
+
+  .top {
+    flex-grow: 1;
+
+    .img {
+      display: block;
+      border: 1px solid #888;
+      border-radius: 15px;
+      width: 100%;
+      height: auto;
+
+      @include app.desktop {
+        border-radius: 30px;
+      }
+    }
+
+    .name {
+      margin-top: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 86%;
+      color: #3d3d3d;
+
+      @include app.desktop {
+        margin-top: 24px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .links {
+    flex-shrink: 0;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include app.desktop {
+      margin-top: 28px;
+    }
+
+    a {
+      display: block;
+      height: 23px;
+      width: 63px;
+
+      @include app.desktop {
+        height: 48px;
+        width: 129px;
+      }
+
+      svg {
+        height: 23px;
+        width: 63px;
+
+        @include app.desktop {
+          height: 48px;
+          width: 129px;
+        }
+      }
+    }
+
+    .btn {
+      @include app.button;
+      @include app.centerRow;
+      width: 60px;
+      height: 23px;
+      border: 1px solid #000;
+      border-radius: 8px;
+
+      @include app.desktop {
+        width: 128px;
+        height: 48px;
+        border: 2px solid #000;
+        border-radius: 16px;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 8px;
+        color: #000;
+
+        @include app.desktop {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+
+
+
+
+}

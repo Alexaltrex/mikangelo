@@ -1,0 +1,48 @@
+@use "../../../../assets/styles/app";
+
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  .btn {
+    @include app.button;
+    @include app.centerRow;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: 0.3s;
+
+    &_selected {
+      background: #f3f2f2;
+    }
+
+    &:not(:first-child) {
+      margin-left: 12px;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: auto;
+    }
+
+    &_prev, &_next {
+      svg {
+        path {
+          fill: #000;
+        }
+      }
+    }
+
+    &_prev {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 20px;
+      color: #000;
+    }
+  }
+}

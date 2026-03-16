@@ -1,13 +1,23 @@
-@import "../../../assets/styles/app";
+@use "../../../assets/styles/app";
 
 .app {
   position: relative;
   min-height: 100vh;
-  //background: radial-gradient(140.09% 104.07% at 1.15% 0%, #f3fce7 6.71%, #aff9e5 100%);
-
+  display: flex;
+  flex-direction: column;
 
   &_disableScroll {
     height: 100vh;
     overflow: hidden;
+  }
+
+  main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header, footer {
+    flex-shrink: 0;
   }
 }

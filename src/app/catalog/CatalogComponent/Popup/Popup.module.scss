@@ -1,0 +1,65 @@
+@use "../../../../assets/styles/app";
+
+.popup {
+  @include app.centerColumn;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #111317;
+
+
+  .card {
+    position: relative;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    @include app.desktop {
+      width: 1266px;
+      height: 687px;
+      border-radius: 36px;
+      display: flex;
+    }
+
+    .closeBtn {
+      @include app.button;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+
+      @include app.desktop {
+        top: 36px;
+        right: 42px;
+      }
+    }
+
+    & > img {
+      display: block;
+      width: auto;
+      height: 420px;
+
+      @include app.desktop {
+        flex-shrink: 0;
+        height: 100%;
+      }
+
+    }
+
+    .content {
+
+      @include app.desktop {
+        flex-grow: 1;
+      }
+    }
+
+
+
+
+
+  }
+
+}

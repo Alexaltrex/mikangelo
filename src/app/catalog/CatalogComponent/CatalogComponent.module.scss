@@ -1,0 +1,162 @@
+@use "../../../assets/styles/app";
+
+.catalogComponent {
+  @include app.container;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include app.desktop {
+    padding-top: 132px;
+    padding-bottom: 85px;
+  }
+
+  .inner {
+    @include app.inner;
+    flex-grow: 1;
+
+
+    .header {
+      display: flex;
+      align-items: center;
+
+      p:nth-child(1) {
+        font-weight: 600;
+        font-size: 20px;
+        color: #000;
+
+        @include app.desktop {
+          font-size: 29px;
+        }
+      }
+
+      p:nth-child(2) {
+        margin-left: 12px;
+        font-weight: 300;
+        font-size: 12px;
+        color: #000;
+
+        @include app.desktop {
+          margin-left: 24px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .filtersWrapper {
+      margin-top: 12px;
+
+      @include app.desktop {
+        display: flex;
+        margin-top: 28px;
+      }
+
+      .filters {
+        position: relative;
+        display: flex;
+
+        .dropdown {
+          margin-left: 8px;
+
+          @include app.desktop {
+            margin-left: 12px;
+          }
+        }
+      }
+
+      .selected {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 12px;
+
+        @include app.desktop {
+          margin-top: 0;
+          margin-left: 28px;
+        }
+
+        .selectedBtn {
+          @include app.button;
+          background: #000;
+          border-radius: 999px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 4px 8px 4px 16px;
+          transition: 0.3s;
+
+          @include app.desktop {
+            padding: 5px 12px 5px 18px;
+          }
+
+          &:not(:first-child) {
+            margin-left: 8px;
+
+            @include app.desktop {
+              margin-left: 12px;
+            }
+          }
+
+          p {
+            font-weight: 400;
+            font-size: 11px;
+            color: #FFF;
+            text-align: left;
+
+            @include app.desktop {
+              font-size: 20px;
+            }
+          }
+
+          svg {
+            transition: 0.3s;
+            margin-left: 15px;
+            width: 6px;
+            height: 6px;
+
+            @include app.desktop {
+              margin-left: 12px;
+              width: 10px;
+              height: 10px;
+            }
+
+            path {
+              stroke: #FFF;
+              stroke-width: 4;
+            }
+          }
+        }
+      }
+    }
+
+    .cards {
+      margin-top: 30px + 2px;
+
+      @include app.desktop {
+        margin-top: 24px + 25px;
+      }
+
+      .cards_inner {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -2px;
+
+        @include app.desktop {
+          margin: -25px;
+        }
+
+      }
+
+
+    }
+
+    .pagination {
+      margin-top: 50px;
+    }
+
+
+  }
+
+}
