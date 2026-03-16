@@ -121,8 +121,8 @@ export const CatalogComponent = () => {
                 }
 
                 {
-                    showPopup && (
-                        <Popup product={popupProduct}
+                    showPopup && popupProduct && (
+                        <Popup product={popupProduct as ICatalogItem}
                                onClose={() => setShowPopup(false)}
                         />
                     )
