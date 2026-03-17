@@ -44,7 +44,9 @@ export const Dropdown = ({
                          ref={ref}
                     >
                         {
-                            values.map((_value, key) => (
+                            values
+                                .sort()
+                                .map((_value, key) => (
                                 <button key={key}
                                         onClick={() => {
                                             setOpen(false)

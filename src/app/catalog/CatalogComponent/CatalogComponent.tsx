@@ -15,7 +15,7 @@ export const CatalogComponent = () => {
     const [category, setCategory] = useState("");
     const [page, setPage] = useState(1)
 
-    const itemsPerPage = 2;
+    const itemsPerPage = 12;
 
     const selectedData  = [...catalogData]
         .filter(el => brand ? el.brand === brand : true)
