@@ -2,16 +2,50 @@
 
 .newsPage {
   @include app.container;
-  height: 100vh;
+  //height: 100vh;
+  padding-top: 70px;
+  padding-bottom: 8px;
+
+  @include app.desktop {
+    padding-top: 224px;
+    padding-bottom: 150px;
+  }
 
   .inner {
     @include app.inner;
-    height: 100% ;
+    height: 100%;
 
-    //.img {
-    //  width: 200px;
-    //  height: 200px;
-    //}
+    .img {
+      display: block;
+      width: 276px;
+      height: 276px;
+      margin-left: auto;
+      margin-right: auto;
+      object-fit: contain;
+
+      @include app.desktop {
+        width: 960px;
+        height: 960px;
+      }
+    }
+
+    .text {
+      margin-top: 24px;
+
+      @include app.desktop {
+        margin-top: 94px;
+      }
+
+      p {
+        font-weight: 900;
+        font-size: 12px;
+        text-align: justify;
+
+        @include app.desktop {
+          font-size: 32px;
+        }
+      }
+    }
   }
 
 }

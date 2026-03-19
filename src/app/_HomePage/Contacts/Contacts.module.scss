@@ -74,6 +74,7 @@
             padding-left: 8px;
             display: flex;
             align-items: center;
+            transition: 0.3s;
 
             @include app.desktop {
               height: 48px;
@@ -89,6 +90,12 @@
               @include app.desktop {
                 margin-top: 0;
                 margin-left: 20px;
+              }
+            }
+
+            &:hover {
+              @include app.desktop {
+                background: lightgrey;
               }
             }
 
@@ -165,6 +172,7 @@
             text-decoration: none;
             height: 61px;
             border-radius: 21px;
+            transition: 0.3s;
 
             @include app.desktop {
               height: 42px;
@@ -187,6 +195,12 @@
             &:nth-child(1) {
               background: #c837ab;
 
+              &:hover {
+                @include app.desktop {
+                  background: #7c2268;
+                }
+              }
+
               p {
                 color: #fff;
               }
@@ -194,6 +208,12 @@
 
             &:nth-child(2) {
               background: #fff;
+
+              &:hover {
+                @include app.desktop {
+                  background: lightgrey;
+                }
+              }
 
               p {
                 color: #000;

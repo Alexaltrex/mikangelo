@@ -10,21 +10,18 @@ interface ICard {
 
 export const Card = ({ product, onMoreDetailsHandler }: ICard) => {
     const {
-        id,
         src,
         name,
-        brand,
-        category,
         href,
-        value,
-        additional,
-        texts,
     } = product
 
     return (
         <div className={style.card}>
             <div className={style.top}>
-                <img src={src} alt="" className={style.img}/>
+                <div className={style.imgWrapper}>
+                    <img src={src} alt="" className={style.img}/>
+                </div>
+
                 <p className={style.name}>
                     {name}
                 </p>

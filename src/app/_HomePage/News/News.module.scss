@@ -146,9 +146,29 @@
         @include app.button;
         @include app.centerRow;
         height: 10px;
+        transition: 0.3s;
 
         &:not(:first-child) {
           margin-left: 80px;
+        }
+
+        &:disabled {
+          opacity: 0.25;
+          cursor: auto;
+        }
+
+        svg {
+          path {
+            transition: 0.3s;
+          }
+        }
+
+        &:hover {
+          svg {
+            path {
+              fill: purple;
+            }
+          }
         }
 
       }

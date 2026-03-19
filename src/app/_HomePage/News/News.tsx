@@ -34,7 +34,7 @@ export const News = () => {
                 >
                     <>
                         {
-                            newsData.map(({id, background, title, text, src}) => (
+                            newsData.map(({id, background, title, text_short, src}) => (
                                 <SwiperSlide key={id}
                                              className={style.slide}
                                 >
@@ -48,7 +48,7 @@ export const News = () => {
                                             <div className={style.infoTop}>
                                                 <p className={style.label}>ОБЗОР</p>
                                                 <p className={style.cardTitle}>{title}</p>
-                                                <p className={style.text}>{text}</p>
+                                                <p className={style.text}>{text_short}</p>
                                             </div>
 
 
@@ -70,7 +70,8 @@ export const News = () => {
                 </Swiper>
 
                 <div className={style.navigation}>
-                    <button onClick={() => swiper.slidePrev()}>
+                    <button onClick={() => swiper.slidePrev()}
+                    >
                         {svgIcons.arrow_left_long}
                     </button>
                     <button onClick={() => swiper.slideNext()}>

@@ -28,6 +28,15 @@ export const CatalogComponent = () => {
     const [showPopup, setShowPopup] = useState(false);
     const [popupProduct, setPopupProduct] = useState<null | ICatalogItem>(null)
 
+    const onPage = (page: number) => {
+        setPage(page);
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+
+
     return (
         <div className={style.catalogComponent}>
             <div className={style.inner}>
@@ -115,7 +124,7 @@ export const CatalogComponent = () => {
                         <Pagination page={page}
                                     pages={pages}
                                     className={style.pagination}
-                                    onPage={(page) => setPage(page)}
+                                    onPage={onPage}
                         />
                     )
                 }

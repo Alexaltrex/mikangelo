@@ -30,7 +30,7 @@ export const Brands = () => {
                                 {
                                     card_title: "Bandido By Mik’AngeLo & Beauty",
                                     card_text: "Профессиональный уход - за волосами, после бритья, шампуни, бальзамы.",
-                                    href: "https://www.wildberries.ru/seller/1354346",
+                                    href: "https://www.wildberries.ru/brands/312294377-bandido-official",
                                 },
                                 {
                                     card_title: "Perfect Cosmetics By Mik’AngeLo & Beauty",

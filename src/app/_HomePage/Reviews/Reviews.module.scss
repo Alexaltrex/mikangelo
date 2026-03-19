@@ -135,6 +135,20 @@
           }
         }
 
+        svg {
+          path {
+            transition: 0.3s;
+          }
+        }
+
+        &:hover {
+          svg {
+            path {
+              fill: purple;
+            }
+          }
+        }
+
       }
     }
 

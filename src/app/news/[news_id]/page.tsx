@@ -1,28 +1,38 @@
-//'use client'
-
-
 import style from "./NewsPage.module.scss"
 import {newsData} from "../../_HomePage/News/data";
+import Image from 'next/image'
 
-export default async function NewsPage({params}: {params: Promise<{news_id: string}>}) {
+export async function generateStaticParams() {
+    return newsData.map((_news) => ({
+        slug: _news.id,
+    }))
+}
+
+export default async function NewsPage({
+                                           params
+}: {
+    params: Promise<{news_id: string
+    }>}) {
     const {news_id} = await params;
-    // console.log(params)
-    // console.log(news_id);
 
     const newsItem = newsData.find(el => el.id === news_id);
 
     return (
         <div className={style.newsPage}
              style={{
-                 //background: newsItem.background
+                 background: newsItem.background
              }}
         >
             <div className={style.inner}>
 
-                <img src='./news_0.png' alt="" className={style.img}/>
+                <img src={newsItem.src} alt="" className={style.img}/>
 
+                <div className={style.text}
+                     style={{color: newsItem.textColor}}
+                >
+                    {newsItem.text}
+                </div>
 
-                {news_id}
             </div>
         </div>
     )

@@ -3,7 +3,8 @@
 .header {
   @include app.container;
   backdrop-filter: blur(71.9000015258789px);
-  background: radial-gradient(112.07% 59.07% at 50% 131.46%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 0.16%);
+  //background: radial-gradient(112.07% 59.07% at 50% 131.46%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 0.16%);
+  background: lightgrey;
   position: absolute;
   z-index: 10;
   left: 0;

@@ -18,20 +18,40 @@
     margin: 10px;
   }
 
+  &:hover {
+    @include app.desktop {
+      .top {
+        .imgWrapper {
+          .img {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
   .top {
     flex-grow: 1;
 
-    .img {
-      display: block;
+    .imgWrapper {
+      overflow: hidden;
       border: 1px solid #888;
       border-radius: 15px;
-      width: 100%;
-      height: auto;
 
       @include app.desktop {
         border-radius: 30px;
       }
+
+
+      .img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: 0.3s;
+      }
     }
+
+
 
     .name {
       margin-top: 12px;
@@ -62,10 +82,17 @@
       display: block;
       height: 23px;
       width: 63px;
+      transition: 0.3s;
 
       @include app.desktop {
         height: 48px;
         width: 129px;
+      }
+
+      &:hover {
+        @include app.desktop {
+          opacity: 0.75;
+        }
       }
 
       svg {
@@ -86,12 +113,19 @@
       height: 23px;
       border: 1px solid #000;
       border-radius: 8px;
+      transition: 0.3s;
 
       @include app.desktop {
         width: 128px;
         height: 48px;
         border: 2px solid #000;
         border-radius: 16px;
+      }
+
+      &:hover {
+        @include app.desktop {
+          opacity: 0.75;
+        }
       }
 
       p {
