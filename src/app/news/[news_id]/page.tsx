@@ -1,5 +1,5 @@
 import style from "./NewsPage.module.scss"
-import {newsData} from "../../_HomePage/News/data";
+import {INews, newsData} from "../../_HomePage/News/data";
 import Image from 'next/image'
 
 export async function generateStaticParams() {
@@ -15,7 +15,7 @@ export default async function NewsPage({
     }>}) {
     const {news_id} = await params;
 
-    const newsItem = newsData.find(el => el.id === news_id);
+    const newsItem = (newsData.find(el => el.id === news_id)) as INews;
 
     return (
         <div className={style.newsPage}
