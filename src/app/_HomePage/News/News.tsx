@@ -46,7 +46,11 @@ export const News = () => {
                                         </div>
                                         <div className={style.info}>
                                             <div className={style.infoTop}>
-                                                <p className={style.label}>ОБЗОР</p>
+                                                <Link className={style.label}
+                                                      href={`/news/${id}`}
+                                                >
+                                                    <p>ОБЗОР</p>
+                                                </Link>
                                                 <p className={style.cardTitle}>{title}</p>
                                                 <p className={style.text}>{text_short}</p>
                                             </div>

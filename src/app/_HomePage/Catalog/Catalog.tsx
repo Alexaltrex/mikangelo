@@ -25,20 +25,24 @@ export const Catalog = () => {
                         </div>
                     </div>
 
-                    <div className={style.imgWrapper}>
-                        <img src="./catalog_3.png" alt=""/>
-                        <p className={style.label}>УХОД ЗА КОЖЕЙ</p>
-                    </div>
+                    {/*<div className={style.imgWrapper}>*/}
+                    {/*    <img src="./catalog_3.png" alt=""/>*/}
+                    {/*    <p className={style.label}>УХОД ЗА КОЖЕЙ</p>*/}
+                    {/*</div>*/}
 
                     <div className={style.row}>
                         <div className={style.imgWrapper}>
                             <img src="./catalog_4.png" alt=""/>
                             <p className={style.label}>САЛОННЫЕ ПРОДУКТЫ</p>
                         </div>
-                        <div className={style.imgWrapper}>
+                        <a className={style.imgWrapper}
+                           href="https://www.wildberries.ru/seller/1354346"
+                           target="_blank"
+                           rel="noreferrer noopener nofollow"
+                        >
                             <img src="./catalog_5.png" alt=""/>
                             <p className={style.label}>ОНЛАЙН МАГАЗИН</p>
-                        </div>
+                        </a>
                     </div>
 
 

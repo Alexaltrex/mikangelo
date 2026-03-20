@@ -31,6 +31,10 @@
       }
 
       & > .imgWrapper {
+        display: block;
+        text-decoration: none;
+
+
         &:not(:first-child) {
           margin-top: 4px;
 

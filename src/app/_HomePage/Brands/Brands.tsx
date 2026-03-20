@@ -50,7 +50,7 @@ export const Brands = () => {
                                 {
                                     card_title: "Keratine queen official",
                                     card_text: "профессиональный уход за волосами, для восстановления волос, шампуни, маски для волос, кондиционеры, сыворотки для волос.",
-                                    href: "https://www.wildberries.ru/seller/1354346",
+                                    href: "https://www.wildberries.ru/brands/312285823-keratine-queen-official",
                                 },
                                 {
                                     card_title: "Black professional line",
