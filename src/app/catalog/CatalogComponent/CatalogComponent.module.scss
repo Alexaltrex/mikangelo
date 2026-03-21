@@ -16,7 +16,7 @@
   .inner {
     @include app.inner;
     flex-grow: 1;
-
+    position: relative;
 
     .header {
       display: flex;
@@ -141,6 +141,7 @@
       .cards_inner {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         margin: -2px;
 
         @include app.desktop {

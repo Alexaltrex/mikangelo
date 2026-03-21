@@ -6,8 +6,8 @@
   z-index: 999;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
+  width: 100vw;
+  height: 100vh;
   background: #111317;
 
 
@@ -62,90 +62,95 @@
       @include app.desktop {
         flex-grow: 1;
         padding: 76px 30px 20px 24px;
+        justify-content: space-between;
       }
 
-      .brand {
-        font-weight: 300;
-        font-size: 16px;
-        color: #3d3d3d;
-      }
+      .contentTop {
 
-      .name {
-        margin-top: 12px;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 90%;
-        color: #3d3d3d;
-
-        @include app.desktop {
-          margin-top: 8px;
-          font-size: 24px;
-        }
-      }
-
-      .texts {
-        margin-top: 12px;
-        padding-bottom: 16px;
-        border-bottom: 1px solid #000;
-
-        @include app.desktop {
-          margin-top: 10px;
-          padding-bottom: 42px;
-        }
-
-        p {
+        .brand {
           font-weight: 300;
           font-size: 16px;
-          line-height: 138%;
-          color: #353535;
+          color: #3d3d3d;
+        }
+
+        .name {
+          margin-top: 12px;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 90%;
+          color: #3d3d3d;
 
           @include app.desktop {
-            font-size: 15px;
-            line-height: 113%;
+            margin-top: 8px;
+            font-size: 24px;
           }
         }
-      }
 
-      .info {
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-between;
+        .texts {
+          margin-top: 12px;
+          padding-bottom: 16px;
 
-        @include app.desktop {
-          margin-top: 10px;
-        }
-
-        & > div {
+          @include app.desktop {
+            margin-top: 10px;
+            padding-bottom: 42px;
+          }
 
           p {
-            font-weight: 400;
-            font-size: 14px;
-            color: #3d3d3d;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 138%;
+            color: #353535;
 
             @include app.desktop {
-              font-size: 16px;
+              font-size: 15px;
+              line-height: 113%;
             }
+          }
+        }
 
-            &:not(:first-child) {
-              margin-top: 8px;
+      }
+
+      .contentBottom {
+        border-top: 1px solid #000;
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+
+        @include app.desktop {
+          margin-top: 36px;
+        }
+
+        .info {
+          margin-top: 20px;
+          display: flex;
+          justify-content: space-between;
+
+          @include app.desktop {
+            margin-top: 10px;
+          }
+
+          & > div {
+
+            p {
+              font-weight: 400;
+              font-size: 14px;
+              color: #3d3d3d;
 
               @include app.desktop {
-                margin-top: 5px;
+                font-size: 16px;
+              }
+
+              &:not(:first-child) {
+                margin-top: 8px;
+
+                @include app.desktop {
+                  margin-top: 5px;
+                }
               }
             }
           }
-        }
 
-        .buy {
-          width: 106px;
-          height: 39px;
-
-          @include app.desktop {
-            width: 190px;
-            height: 70px;
-          }
-
-          svg {
+          .buy {
             width: 106px;
             height: 39px;
 
@@ -153,40 +158,48 @@
               width: 190px;
               height: 70px;
             }
+
+            svg {
+              width: 106px;
+              height: 39px;
+
+              @include app.desktop {
+                width: 190px;
+                height: 70px;
+              }
+            }
           }
         }
-      }
 
-      .link {
-        align-self: flex-start;
-        display: block;
-        text-decoration: none;
-        margin-top: 21px;
-        border: 1px solid #aaa;
-        border-radius: 999px;
-        padding: 6px 8px;
-
-        @include app.desktop {
-          margin-top: 10px;
-          padding: 4px 8px;
-        }
-
-        p {
-          font-weight: 900;
-          font-size: 8px;
-          line-height: 200%;
-          color: #f00;
+        .link {
+          align-self: flex-start;
+          display: block;
+          text-decoration: none;
+          margin-top: 21px;
+          border: 1px solid #aaa;
+          border-radius: 999px;
+          padding: 6px 8px;
 
           @include app.desktop {
-            font-size: 15px;
-            line-height: 107%;
+            margin-top: 10px;
+            padding: 4px 8px;
+          }
+
+          p {
+            font-weight: 900;
+            font-size: 8px;
+            line-height: 200%;
+            color: #f00;
+
+            @include app.desktop {
+              font-size: 15px;
+              line-height: 107%;
+            }
           }
         }
       }
 
-
     }
-
 
   }
 

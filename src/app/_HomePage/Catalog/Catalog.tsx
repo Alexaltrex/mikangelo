@@ -1,5 +1,6 @@
 import style from "./Catalog.module.scss"
 import {LabelCustom} from "../../components/LabelCustom/LabelCustom";
+import Link from "next/link";
 
 export const Catalog = () => {
     return (
@@ -9,20 +10,26 @@ export const Catalog = () => {
                 <LabelCustom text="Каталог" isWhite={false}/>
 
                 <div className={style.images}>
-                    <div className={style.imgWrapper}>
+                    <Link className={style.imgWrapper}
+                          href="/catalog"
+                    >
                         <img src="./catalog_0.png" alt=""/>
                         <p className={style.label}>УКЛАДКА И СТАЙЛИНГ</p>
-                    </div>
+                    </Link>
 
                     <div className={style.row}>
-                        <div className={style.imgWrapper}>
+                        <Link className={style.imgWrapper}
+                              href="/catalog"
+                        >
                             <img src="./catalog_1.png" alt=""/>
                             <p className={style.label}>УХОД ЗА ВОЛОСАМИ</p>
-                        </div>
-                        <div className={style.imgWrapper}>
+                        </Link>
+                        <Link className={style.imgWrapper}
+                              href="/catalog"
+                        >
                             <img src="./catalog_2.png" alt=""/>
                             <p className={style.label}>БРИТЬЕ И УХОД</p>
-                        </div>
+                        </Link>
                     </div>
 
                     {/*<div className={style.imgWrapper}>*/}
@@ -31,10 +38,12 @@ export const Catalog = () => {
                     {/*</div>*/}
 
                     <div className={style.row}>
-                        <div className={style.imgWrapper}>
+                        <Link className={style.imgWrapper}
+                              href="/catalog"
+                        >
                             <img src="./catalog_4.png" alt=""/>
                             <p className={style.label}>САЛОННЫЕ ПРОДУКТЫ</p>
-                        </div>
+                        </Link>
                         <a className={style.imgWrapper}
                            href="https://www.wildberries.ru/seller/1354346"
                            target="_blank"
