@@ -18,9 +18,11 @@ export const Card = ({ product, onMoreDetailsHandler }: ICard) => {
     return (
         <div className={style.card}>
             <div className={style.top}>
-                <div className={style.imgWrapper}>
+                <button className={style.imgWrapper}
+                        onClick={() => onMoreDetailsHandler(product)}
+                >
                     <img src={src} alt="" className={style.img}/>
-                </div>
+                </button>
 
                 <p className={style.name}>
                     {name}
