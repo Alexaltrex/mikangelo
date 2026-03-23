@@ -12,7 +12,7 @@ export const Footer = () => {
                 </div>
 
                 <p className={style.right}>
-                    все права защищены 2026
+                    Copyright © 2026 Mik'Angelo. All rights reserved
                 </p>
 
                 <Link href='/#first' className={style.link}>

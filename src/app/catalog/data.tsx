@@ -49,6 +49,7 @@ export const categories = [
     "Кондиционер для волос",
     "Лосьон после бритья",
     "Спрей для волос",
+    "Краска для волос",
 ]
 
 
@@ -4376,6 +4377,21 @@ export const catalogData: ICatalogItem[] = [
         )
     },
 
+    // Краска для волос - Morfos
+
+    {
+        id: 113,
+        src: "./catalog/113.png",
+        name: "Краска для волос Morfose",
+        brand: "Morfos",
+        category: "Краска для волос",
+        href: "",
+        texts: (
+            <>
+
+            </>
+        )
+    },
 
     // {
     //     id: 0,

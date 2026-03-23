@@ -1,0 +1,488 @@
+@use "./../../assets/styles/app";
+
+.palettePage {
+  @include app.container;
+  padding-top: 76px;
+  padding-bottom: 16px;
+
+
+  @include app.desktop {
+    padding-top: 148px;
+    padding-bottom: 76px;
+  }
+
+  .inner {
+    @include app.inner;
+
+    h2.title {
+      font-weight: 300;
+      font-size: 24px;
+      color: #000;
+      text-align: center;
+
+      @include app.desktop {
+        font-size: 48px;
+      }
+    }
+
+    .content {
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+
+      @include app.desktop {
+        margin-top: 80px;
+        flex-direction: row;
+      }
+
+      .card {
+        align-self: center;
+        padding: 10px 8px 14px;
+        border: 1px solid #000;
+        border-radius: 10px;
+
+        @include app.desktop {
+          flex-shrink: 0;
+          align-self: normal;
+          padding: 32px 28px 28px;
+          border-radius: 30px;
+        }
+
+        img  {
+          display: block;
+          border: 1px solid #888;
+          border-radius: 10px;
+          width: 105px;
+          height: auto;
+
+          @include app.desktop {
+            width: 347px;
+            border-radius: 24px;
+          }
+        }
+
+        p {
+          margin-top: 8px;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 100%;
+          color: #3d3d3d;
+          width: 105px;
+
+          @include app.desktop {
+            margin-top: 28px;
+            font-size: 36px;
+            width: 347px;
+          }
+        }
+      }
+
+      .palette {
+        margin-top: 24px;
+
+        @include app.desktop {
+          flex-grow: 1;
+          margin-top: 0;
+          margin-left: 60px;
+        }
+
+        .row {
+          display: flex;
+          justify-content: center;
+
+          @include app.desktop {
+            justify-content: flex-start;
+          }
+
+          &:not(:first-child) {
+            margin-top: 4px;
+
+            @include app.desktop {
+              margin-top: 10px;
+            }
+          }
+
+          .link {
+            @include app.centerRow;
+            position: relative;
+            text-decoration: none;
+            border-radius: 0 0 8px 8px;
+            background: green;
+            height: 24px;
+            flex-grow: 1;
+
+            @include app.desktop {
+              border-radius: 0 0 12px 12px;
+              height: 30px;
+            }
+
+            &:not(:first-child) {
+              margin-left: 2px;
+
+              @include app.desktop {
+                margin-left: 10px;
+              }
+            }
+
+            p {
+              font-weight: 700;
+              font-size: 12px;
+              color: #fff;
+              white-space: nowrap;
+
+              @include app.desktop {
+                font-size: 14px;
+                top: 50%;
+              }
+            }
+
+          }
+
+          &:nth-child(1) {
+            .link {
+              &:nth-child(1) {
+                background: #1f2438;
+              }
+              &:nth-child(2) {
+                background: #000;
+              }
+              &:nth-child(3) {
+                background: #2c0f0f;
+              }
+              &:nth-child(4) {
+                background: #4b1718;
+              }
+              &:nth-child(5) {
+                background: #5a2f30;
+              }
+              &:nth-child(6) {
+                background: #6c0002;
+              }
+              &:nth-child(7) {
+                background: #744739;
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            .link {
+              &:nth-child(1) {
+                background: #985e4b;
+              }
+              &:nth-child(2) {
+                background: #b58468;
+              }
+              &:nth-child(3) {
+                background: #c9a361;
+              }
+              &:nth-child(4) {
+                background: #5c3429;
+              }
+            }
+          }
+
+          &:nth-child(3) {
+            .link {
+              &:nth-child(1) {
+                background: #4a2f24;
+              }
+              &:nth-child(2) {
+                background: #463024;
+              }
+              &:nth-child(3) {
+                background: #765c4c;
+              }
+              &:nth-child(4) {
+                background: #8b6455;
+              }
+            }
+          }
+
+          &:nth-child(4) {
+            .link {
+              &:nth-child(1) {
+                background: #251a1b;
+              }
+              &:nth-child(2) {
+                background: #463024;
+              }
+              &:nth-child(3) {
+                background: #95796b;
+              }
+            }
+          }
+
+          &:nth-child(5) {
+            .link {
+              &:nth-child(1) {
+                background: #341d17;
+              }
+              &:nth-child(2) {
+                background: #503f35;
+              }
+              &:nth-child(3) {
+                background: #503d36;
+              }
+              &:nth-child(4) {
+                background: #4f3e37;
+              }
+            }
+          }
+
+          &:nth-child(6) {
+            .link {
+              &:nth-child(1) {
+                background: #5a352d;
+              }
+              &:nth-child(2) {
+                background: #874937;
+              }
+              &:nth-child(3) {
+                background: #ec8355;
+              }
+              &:nth-child(4) {
+                background: #42211c;
+              }
+              &:nth-child(5) {
+                background: #39150f;
+              }
+              &:nth-child(6) {
+                background: #a6422a;
+              }
+            }
+          }
+
+          &:nth-child(7) {
+            .link {
+              &:nth-child(1) {
+                background: #672c1d;
+              }
+              &:nth-child(2) {
+                background: #9d5a45;
+              }
+              &:nth-child(3) {
+                background: #a85837;
+              }
+              &:nth-child(4) {
+                background: #614b4e;
+              }
+              &:nth-child(5) {
+                background: #352734;
+              }
+              &:nth-child(6) {
+                background: #925984;
+              }
+            }
+          }
+
+          &:nth-child(8) {
+            .link {
+              &:nth-child(1) {
+                background: #4d2427;
+              }
+              &:nth-child(2) {
+                background: #843d41;
+              }
+              &:nth-child(3) {
+                background: #802324;
+              }
+              &:nth-child(4) {
+                background: #521a1d;
+              }
+              &:nth-child(5) {
+                background: #5d1e27;
+              }
+              &:nth-child(6) {
+                background: #ad313c;
+              }
+            }
+          }
+
+          &:nth-child(9) {
+            .link {
+              &:nth-child(1) {
+                background: #d3c3b3;
+              }
+              &:nth-child(2) {
+                background: #cdbdc0;
+              }
+              &:nth-child(3) {
+                background: #edd0bf;
+              }
+              &:nth-child(4) {
+                background: #d5b29f;
+              }
+            }
+          }
+
+          &:nth-child(10) {
+            .link {
+
+              p {
+                font-size: 8px;
+
+                @include app.desktop {
+                  font-size: 14px;
+                }
+              }
+
+              &:nth-child(1) {
+                background: #fcce01;
+              }
+              &:nth-child(2) {
+                background: #f29725;
+              }
+              &:nth-child(3) {
+                background: #d32a2c;
+              }
+              &:nth-child(4) {
+                background: #054fa1;
+              }
+              &:nth-child(5) {
+                background: #0f6d3b;
+              }
+              &:nth-child(6) {
+                background: #9c9e9d;
+              }
+              &:nth-child(7) {
+                background: #a890b7;
+              }
+              &:nth-child(8) {
+                background: #ebebeb;
+
+                p {
+                  color: #000;
+                }
+              }
+            }
+          }
+
+          &:nth-child(11) {
+            .link {
+              &:nth-child(1) {
+                background: #302c2d;
+              }
+              &:nth-child(2) {
+                background: #3e322e;
+              }
+              &:nth-child(3) {
+                background: #362116;
+              }
+              &:nth-child(4) {
+                background: #3a2417;
+              }
+              &:nth-child(5) {
+                background: #b38a6a;
+              }
+              &:nth-child(6) {
+                background: #bf9a7d;
+              }
+              &:nth-child(7) {
+                background: #e2c6ba;
+              }
+            }
+          }
+
+          &:nth-child(12) {
+            .link {
+              &:nth-child(1) {
+                background: #2a1a1a;
+              }
+              &:nth-child(2) {
+                background: #381b13;
+              }
+              &:nth-child(3) {
+                background: #5a301f;
+              }
+              &:nth-child(4) {
+                background: #443027;
+              }
+              &:nth-child(5) {
+                background: #45332d;
+              }
+              &:nth-child(6) {
+                background: #6b4633;
+              }
+              &:nth-child(7) {
+                background: #b37a55;
+              }
+            }
+          }
+
+          &:nth-child(13) {
+            .link {
+              &:nth-child(1) {
+                background: #674a3f;
+              }
+              &:nth-child(2) {
+                background: #7f4f3b;
+              }
+              &:nth-child(3) {
+                background: #6e4a35;
+              }
+              &:nth-child(4) {
+                background: #5f3b2b;
+              }
+              &:nth-child(5) {
+                background: #361913;
+              }
+              &:nth-child(6) {
+                background: #713b21;
+              }
+              &:nth-child(7) {
+                background: #854424;
+              }
+            }
+          }
+
+          &:nth-child(14) {
+            .link {
+              &:nth-child(1) {
+                background: #886b60;
+              }
+              &:nth-child(2) {
+                background: #644e46;
+              }
+              &:nth-child(3) {
+                background: #998376;
+              }
+              &:nth-child(4) {
+                background: #b6967f;
+              }
+              &:nth-child(5) {
+                background: #ac8770;
+              }
+              &:nth-child(6) {
+                background: #8d694f;
+              }
+            }
+          }
+
+          &:nth-child(15) {
+            .link {
+              &:nth-child(1) {
+                background: #523827;
+              }
+              &:nth-child(2) {
+                background: #cdad9b;
+              }
+              &:nth-child(3) {
+                background: #c6a890;
+              }
+              &:nth-child(4) {
+                background: #7e6254;
+              }
+              &:nth-child(5) {
+                background: #6c4a31;
+              }
+              &:nth-child(6) {
+                background: #7d5a3c;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
