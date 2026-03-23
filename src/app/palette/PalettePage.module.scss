@@ -110,6 +110,7 @@
             background: green;
             height: 24px;
             flex-grow: 1;
+            transition: 0.3s;
 
             @include app.desktop {
               border-radius: 0 0 12px 12px;
@@ -121,6 +122,12 @@
 
               @include app.desktop {
                 margin-left: 10px;
+              }
+            }
+
+            &:hover {
+              @include app.desktop {
+                transform: scale(1.05);
               }
             }
 
