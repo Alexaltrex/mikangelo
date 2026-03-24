@@ -45,7 +45,13 @@ export const Dropdown = ({
                     >
                         {
                             values
-                                .sort()
+                                .sort((a, b) => {
+                                    if (a[0].toUpperCase() >= b[0].toUpperCase()) {
+                                        return 1
+                                    } else {
+                                        return -1
+                                    }
+                                })
                                 .map((_value, key) => (
                                 <button key={key}
                                         onClick={() => {

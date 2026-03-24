@@ -108,6 +108,10 @@
             @include app.desktop {
               font-size: 20px;
             }
+
+            &::first-letter {
+              text-transform: uppercase;
+            }
           }
 
           svg {

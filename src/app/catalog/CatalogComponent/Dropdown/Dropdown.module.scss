@@ -86,6 +86,10 @@
         color: #000;
         text-align: left;
         white-space: nowrap;
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
       }
     }
   }

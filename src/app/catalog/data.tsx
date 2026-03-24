@@ -4383,7 +4383,7 @@ export const catalogData: ICatalogItem[] = [
         id: 113,
         src: "./catalog/113.png",
         name: "Краска для волос Morfose",
-        brand: "Morfos",
+        brand: "Morfose",
         category: "Краска для волос",
         href: "",
         texts: (
