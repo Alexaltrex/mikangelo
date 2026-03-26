@@ -19,9 +19,16 @@ export const Reviews = () => {
 
                 <LabelCustom text="Отзывы" isWhite={false}/>
 
-                <p className={style.about}>
-                    Что говорят клиенты
-                </p>
+                <div className={style.wrapper}>
+                    <p className={style.about}>
+                        Что говорят клиенты
+                    </p>
+                    <div className={style.btn}>
+                        <p>БОЛЕЕ 15 ТЫСЯЧ ОТЗЫВОВ</p>
+                        {svgIcons.arrow_right}
+                    </div>
+                </div>
+
 
                 <Swiper breakpoints={{
                     320: {

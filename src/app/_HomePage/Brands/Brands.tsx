@@ -75,7 +75,7 @@ export const Brands = () => {
                                 {
                                     card_title: "Smoothly Professional",
                                     card_text: "профессиональный уход для депиляции, воски для депиляции.",
-                                    href: "https://www.wildberries.ru/brands/312113163-academie-professional-hair",
+                                    href: "https://www.wildberries.ru/brands/312256585-smoothly-professional",
                                 },
                                 {
                                     card_title: "Thuya professional",

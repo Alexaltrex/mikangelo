@@ -3213,7 +3213,7 @@ export const catalogData: ICatalogItem[] = [
         name: "Воск для депиляции в гранулах - мёдовый",
         brand: "Inoderm",
         category: "Воск для депиляции",
-        href: "#",
+        href: "https://www.wildberries.am/catalog/704055335/detail.aspx?size=980874609",
         value: "100gr",
         texts: (
             <>
@@ -3238,7 +3238,7 @@ export const catalogData: ICatalogItem[] = [
         name: "Воск для депиляции в гранулах - золотистый",
         brand: "Inoderm",
         category: "Воск для депиляции",
-        href: "#",
+        href: "https://www.wildberries.am/catalog/704055337/detail.aspx?size=980874611",
         value: "100gr",
         texts: (
             <>
@@ -3590,7 +3590,7 @@ export const catalogData: ICatalogItem[] = [
         name: "Маска для Волос без Сульфатный с Розмарином",
         brand: "Keratine queen official",
         category: "Маски для волос",
-        href: "https://www.wildberries.am/catalog/884817461/detail.aspx?size=1334916732",
+        href: "https://www.wildberries.am/catalog/891414948/detail.aspx?size=1346615161",
         value: "1000ml",
         texts: (
             <>
@@ -3824,7 +3824,7 @@ export const catalogData: ICatalogItem[] = [
     },
     {
         id: 102,
-        src: "./catalog/000.png",
+        src: "./catalog/102.png",
         name: "Сыворотка восстанавливающий без сульфатный для волос",
         brand: "Keratine queen official",
         category: "Сыворотка для волос",
@@ -3918,7 +3918,7 @@ export const catalogData: ICatalogItem[] = [
         name: "Кондиционер без Сульфатный с Коллагеном для Волос",
         brand: "Keratine queen official",
         category: "Кондиционер для волос",
-        href: "https://www.wildberries.am/catalog/846369377/detail.aspx?size=1272299978",
+        href: "https://www.wildberries.am/catalog/856133852/detail.aspx?size=1288221963",
         value: "750ml",
         texts: (
             <>

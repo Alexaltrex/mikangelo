@@ -109,7 +109,7 @@ export const FirstBlock = () => {
                 </div>
                 
                 <div className={clsx(style.bottomPart, "bottomPart")}>
-                    <a href="#" target="_blank" className={style.wb_button}>
+                    <a href="https://www.wildberries.am/seller/1354346" target="_blank" className={style.wb_button}>
                         <img src="./wb_button.png" alt=""/>
                     </a>
 
