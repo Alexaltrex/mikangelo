@@ -19,10 +19,10 @@ export const Catalog = () => {
 
                     <div className={style.row}>
                         <Link className={style.imgWrapper}
-                              href="/catalog"
+                              href="/palette"
                         >
                             <img src="./catalog_1.png" alt=""/>
-                            <p className={style.label}>УХОД ЗА ВОЛОСАМИ</p>
+                            <p className={style.label}>КРАСКИ ДЛЯ ВОЛОС</p>
                         </Link>
                         <Link className={style.imgWrapper}
                               href="/catalog"

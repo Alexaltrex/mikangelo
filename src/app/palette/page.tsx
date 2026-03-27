@@ -18,7 +18,7 @@ const PalettePage = () => {
                 <div className={style.content}>
 
                     <div className={style.card}>
-                        <img src="/catalog/113.png" alt=""/>
+                        <img src="/catalog/113.jpg" alt=""/>
                         <p>Краска для волос Morfose</p>
                     </div>
 
