@@ -32,13 +32,18 @@
       }
 
       .btn {
-        @include app.onlyDesktop(flex);
+        display: flex;
         align-items: center;
         justify-content: center;
         width: 286px;
         height: 50px;
         border-radius: 999px;
         background: #ff004f;
+        margin-top: 16px;
+
+        @include app.desktop {
+          margin-top: 0;
+        }
 
         p {
           font-weight: 900;
